@@ -1,22 +1,28 @@
 <template>
     <div class="main-div">
         <Header></Header>
-        <SidebarElement></SidebarElement>
+        <div class="div-horizont">
+            <SidebarElement></SidebarElement>
+            <div class="alignment-center">
+                <DetectorTest></DetectorTest>
+            </div>
+        </div>
     </div>
     
 </template>
 
 <script>
-// import Sidebar from "./components/Sidebar.vue"
 import ButtonElement from "./components/ButtonElement.vue";
 import SidebarElement from "./components/SidebarElement.vue";
 import Header from "./components/Header.vue";
+import DetectorTest from "./components/DetectorTest.vue";
 
 export default {
     components: {
         ButtonElement,
         SidebarElement,
-        Header
+        Header,
+        DetectorTest
     },
     data() {
         return {
@@ -46,5 +52,14 @@ export default {
     body, html {
         margin: 0;
         padding: 0;
+    }
+
+    .div-horizont {
+        display: flex;
+    }
+
+    .alignment-center {
+        margin-left: 425px;
+        margin-top: 50px;
     }
 </style>
